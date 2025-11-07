@@ -1,9 +1,8 @@
 <template>
   <section>
-    <h1>Perfil</h1>
+    <p>{{ nombreMayus(name) }}</p>
+    <p><strong>{{ fullName }}</strong></p>
 
-    <p>{{ fullName }}</p>
-    <p>{{ fullNameUpper }}</p>
     <form class="form" @submit.prevent>
       <label>Nombre <input v-model="name" /></label>
       <label>Apellido <input v-model="lastName" /></label>
@@ -13,7 +12,6 @@
         <button type="button" @click="changeData">Cambiar datos</button>
         <button type="button" @click="changeAge">Edad = 18</button>
         <button type="button" @click="resetData">Reset</button>
-        <button type="button" @click="saveNames">Guardar</button>
       </div>
     </form>
   </section>
@@ -21,7 +19,7 @@
 
 <script setup lang="ts">
 import { usePerfilPage } from './perfilPage'
-const { name, lastName, age, fullName, changeData, changeAge, resetData, fullNameUpper, saveNames } = usePerfilPage()
+const { name, lastName, age, fullName, changeData, changeAge, resetData, nombreMayus } = usePerfilPage()
 </script>
 
 <style scoped>
