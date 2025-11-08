@@ -10,16 +10,17 @@
     </div>
 
     <div class="home__actions">
-      <button @click="changeValue(1)">Incrementar</button>
-      <button @click="changeValue(-1)">Decrementar</button>
-      <button @click="resetValue(0)">Resetear</button>
+      <button @click="changeBy(1)">Incrementar</button>
+      <button @click="changeBy(-1)">Decrementar</button>
+      <button @click="reset()">Resetear</button>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { useHomePage } from './homePage'
-const { counter, counterSignal, changeValue, resetValue } = useHomePage()
+import { useCounterStore } from '@/stores/counter.store'
+
+const { counter, counterSignal, changeBy, reset } = useCounterStore()
 </script>
 
 <style scoped>

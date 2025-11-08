@@ -1,53 +1,25 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AppHeader from '@/components/layout/AppHeader.vue'
+</script>
 
 <template>
-  <header class="site-header">
-    <h1 class="site-title"></h1>
-    <nav class="nav">
-      <RouterLink to="/" class="nav-link">Home</RouterLink>
-      <RouterLink :to="{ name: 'perfil', params: { id: 1 } }" class="nav-link">Perfil</RouterLink>
-      <RouterLink :to="{ name: 'projects' }" class="nav-link">Proyectos</RouterLink>
-      <RouterLink :to="{ name: 'projects-two' }" class="nav-link">Proyectos Dos</RouterLink>
-    </nav>
-  </header>
-  <main class="site-main">
-    <RouterView />
-  </main>
+  <div class="app-shell">
+    <AppHeader />
+    <main class="site-main">
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <style scoped>
-.site-header {
+.app-shell {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-}
-
-.site-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1f2937;
-}
-
-.nav {
-  display: flex;
-  gap: 1.5rem;
-  background-color: #8ecae6;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-}
-
-.nav-link {
-  color: #0f172a;
-  font-weight: 600;
-}
-
-.nav-link.router-link-active,
-.nav-link.router-link-exact-active {
-  text-decoration: underline;
+  min-height: 100vh;
 }
 
 .site-main {
   display: block;
+  flex: 1 1 auto;
 }
 </style>

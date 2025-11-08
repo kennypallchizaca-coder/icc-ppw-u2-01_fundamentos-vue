@@ -1,6 +1,6 @@
 <template>
   <section>
-    <p>{{ nombreMayus(name) }}</p>
+    <p>{{ formatName(name) }}</p>
     <p><strong>{{ fullName }}</strong></p>
 
     <form class="form" @submit.prevent>
@@ -18,8 +18,9 @@
 </template>
 
 <script setup lang="ts">
-import { usePerfilPage } from './perfilPage'
-const { name, lastName, age, fullName, changeData, changeAge, resetData, nombreMayus } = usePerfilPage()
+import { useProfileStore } from '@/stores/profile.store'
+
+const { name, lastName, age, fullName, changeData, changeAge, resetData, formatName } = useProfileStore()
 </script>
 
 <style scoped>
