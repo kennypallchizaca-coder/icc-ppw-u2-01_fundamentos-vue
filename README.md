@@ -1,17 +1,34 @@
 # 01-fundamentos-vue
 
-This template should help get you started developing with Vue 3 in Vite.
+This project contains the exercises and examples developed for the "Fundamentos de Vue" module. It is built with [Vue 3](https://vuejs.org/) and [Vite](https://vitejs.dev/) and uses TypeScript as the primary language.
+
+## Project Structure
+
+```
+src/
+├── assets/          # Global styles, images and static assets
+├── components/      # Reusable and layout-specific components
+│   └── layout/      # Application shell elements (header, navigation, etc.)
+├── router/          # Application routing configuration
+├── services/        # Domain services and data helpers
+├── stores/          # Local state containers built with the Composition API
+├── utils/           # Utility helpers shared across modules
+├── views/           # Page-level components used by the router
+├── App.vue          # Root component
+└── main.ts          # Application entry point
+```
 
 ## Recommended IDE Setup
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [VS Code](https://code.visualstudio.com/)
+  - [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (disable Vetur)
 
 ## Recommended Browser Setup
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
+- Chromium-based browsers (Chrome, Edge, Brave, etc.)
+  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
   - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
+- Firefox
   - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
   - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
@@ -36,5 +53,3 @@ pnpm dev
 ```sh
 pnpm build
 ```
-# icc-ppw-u2-01_fundamentos-vue
-

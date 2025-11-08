@@ -8,7 +8,7 @@
         <label class="sr-only" for="projectName">Nombre del Proyecto</label>
         <input
           id="projectName"
-          v-model="newProject.name"
+          v-model="form.name"
           type="text"
           placeholder="Nombre del Proyecto"
           required
@@ -16,7 +16,7 @@
         <label class="sr-only" for="projectDescription">Descripción del Proyecto</label>
         <input
           id="projectDescription"
-          v-model="newProject.description"
+          v-model="form.description"
           type="text"
           placeholder="Descripción del Proyecto"
           required
@@ -37,32 +37,9 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { useProjectStore } from '@/stores/project.store'
 
-type Project = {
-  name: string
-  description: string
-}
-
-const projects = ref<Project[]>([
-  { name: 'Proyecto 1', description: 'Descripción del Proyecto 1' }
-])
-
-const newProject = reactive<Project>({
-  name: '',
-  description: ''
-})
-
-function addProject() {
-  const name = newProject.name.trim()
-  const description = newProject.description.trim()
-
-  if (!name || !description) return
-
-  projects.value.push({ name, description })
-  newProject.name = ''
-  newProject.description = ''
-}
+const { projects, form, addProject } = useProjectStore()
 </script>
 
 <style scoped>
