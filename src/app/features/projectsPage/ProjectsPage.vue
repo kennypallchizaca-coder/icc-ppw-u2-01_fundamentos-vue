@@ -129,4 +129,19 @@ ul {
   white-space: nowrap;
   border: 0;
 }
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color:black;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color:black;
+}
+li {
+  color:black;
+}
 </style>

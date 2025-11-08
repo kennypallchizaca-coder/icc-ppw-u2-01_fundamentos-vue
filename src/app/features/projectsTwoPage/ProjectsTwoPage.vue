@@ -11,10 +11,12 @@
 .projects-two {
   display: grid;
   gap: 0.75rem;
+  color: black;
 }
 
 h2 {
   font-size: 1.75rem;
   font-weight: 700;
+  color: black;
 }
 </style>

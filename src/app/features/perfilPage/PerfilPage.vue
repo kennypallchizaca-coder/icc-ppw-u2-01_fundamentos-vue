@@ -23,6 +23,9 @@ const { name, lastName, age, fullName, changeData, changeAge, resetData, nombreM
 </script>
 
 <style scoped>
+p { color: black; }
+label { display: block; margin-top: .5rem; color: black; }
+
 .form { display: grid; gap: .75rem; max-width: 420px; margin-top: .5rem; }
 .row { display: flex; gap: .5rem; margin-top: .5rem; }
 input { padding: .45rem; }

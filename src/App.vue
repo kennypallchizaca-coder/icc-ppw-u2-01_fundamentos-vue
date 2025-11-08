@@ -2,7 +2,7 @@
 
 <template>
   <header class="site-header">
-    <h1 class="site-title">Hello, 01-fundamentos</h1>
+    <h1 class="site-title"></h1>
     <nav class="nav">
       <RouterLink to="/" class="nav-link">Home</RouterLink>
       <RouterLink :to="{ name: 'perfil', params: { id: 1 } }" class="nav-link">Perfil</RouterLink>

@@ -32,21 +32,25 @@ const { counter, counterSignal, changeValue, resetValue } = useHomePage()
 .home__title {
   font-size: 1.75rem;
   font-weight: 700;
+  color: black;
 }
 
 .home__subtitle {
   font-size: 1.25rem;
   font-weight: 600;
+  color: black;
 }
 
 .home__description {
   font-size: 1rem;
+  color: black;
 }
 
 .home__counters {
   margin-top: 0.5rem;
   display: grid;
   gap: 0.35rem;
+  color: black;
 }
 
 .home__actions {
@@ -54,6 +58,7 @@ const { counter, counterSignal, changeValue, resetValue } = useHomePage()
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 0.75rem;
+  color: black;
 }
 
 button {
