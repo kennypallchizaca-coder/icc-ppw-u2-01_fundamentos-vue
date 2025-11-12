@@ -25,18 +25,12 @@
       </form>
     </div>
 
-    <div class="projects__list">
-      <h3>Listado de Proyectos</h3>
-      <ul>
-        <li v-for="project in projects" :key="project.name">
-          {{ project.name }} - {{ project.description }}
-        </li>
-      </ul>
-    </div>
+    <ProjectList :projects="projects" />
   </section>
 </template>
 
 <script setup lang="ts">
+import ProjectList from '@/components/projects/ProjectList.vue'
 import { useProjectStore } from '@/stores/project.store'
 
 const { projects, form, addProject } = useProjectStore()
@@ -53,8 +47,7 @@ const { projects, form, addProject } = useProjectStore()
   font-weight: 700;
 }
 
-.projects__form,
-.projects__list {
+.projects__form {
   display: grid;
   gap: 0.75rem;
 }
@@ -88,13 +81,6 @@ button:hover {
   background-color: #7dc0df;
 }
 
-ul {
-  list-style: disc;
-  padding-left: 1.25rem;
-  display: grid;
-  gap: 0.5rem;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -107,18 +93,10 @@ ul {
   border: 0;
 }
 
-h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color:black;
-}
-
-h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color:black;
-}
-li {
-  color:black;
+h2,
+h3,
+input,
+button {
+  color: #0f172a;
 }
 </style>

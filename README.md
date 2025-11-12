@@ -8,7 +8,8 @@ This project contains the exercises and examples developed for the "Fundamentos 
 src/
 ├── assets/          # Global styles, images and static assets
 ├── components/      # Reusable and layout-specific components
-│   └── layout/      # Application shell elements (header, navigation, etc.)
+│   ├── layout/      # Application shell elements (header, navigation, etc.)
+│   └── projects/    # Feature-specific building blocks for the projects module
 ├── router/          # Application routing configuration
 ├── services/        # Domain services and data helpers
 ├── stores/          # Local state containers built with the Composition API
@@ -17,6 +18,12 @@ src/
 ├── App.vue          # Root component
 └── main.ts          # Application entry point
 ```
+
+## Features
+
+- **Project management demo**: add, list, remove individually, clear all, or remove by name using shared UI components.
+- **Reusable project list component**: the `ProjectList` component renders the project catalog from any view, ensuring a consistent experience between the “Proyectos” and “Proyectos Dos” pages.
+- **Centralized state**: a lightweight store keeps form data and project collection in sync across views without external dependencies.
 
 ## Recommended IDE Setup
 
