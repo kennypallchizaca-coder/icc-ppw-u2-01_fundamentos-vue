@@ -30,6 +30,7 @@
           <button type="button" @click="removeLastProject">Eliminar</button>
           <button type="button" @click="clearProjects">Eliminar Todos</button>
           <button type="button" @click="removeByName">Eliminar por Nombre</button>
+          <button type="button" @click="clearlabels">Limpiar Campos de Nombres y Descripciones</button>
         </div>
       </form>
     </section>
@@ -40,7 +41,7 @@
 import ProjectList from '@/components/projects/ProjectList.vue'
 import { useProjectStore } from '@/stores/project.store'
 
-const { projects, form, addProject, removeLastProject, clearProjects, removeProjectByName } =
+const { projects, form, addProject, removeLastProject, clearProjects, removeProjectByName, clearlabels, resetForm } =
   useProjectStore()
 
 function removeByName() {

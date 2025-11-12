@@ -35,12 +35,21 @@ export function useProjectStore() {
     projects.value = projects.value.filter((project) => project.name !== trimmedName)
   }
 
+  function clearlabels() {
+    form.name = ''
+    form.description = ''
+   
+  }
+
   return {
     projects,
     form,
     addProject,
     removeLastProject,
     clearProjects,
-    removeProjectByName
+    removeProjectByName,
+    clearlabels,
+    resetForm
   }
+
 }
