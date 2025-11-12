@@ -20,9 +20,27 @@ export function useProjectStore() {
     resetForm()
   }
 
+  function removeLastProject() {
+    projects.value.pop()
+  }
+
+  function clearProjects() {
+    projects.value.splice(0)
+  }
+
+  function removeProjectByName(name: string) {
+    const trimmedName = name.trim()
+    if (!trimmedName) return
+
+    projects.value = projects.value.filter((project) => project.name !== trimmedName)
+  }
+
   return {
     projects,
     form,
-    addProject
+    addProject,
+    removeLastProject,
+    clearProjects,
+    removeProjectByName
   }
 }
