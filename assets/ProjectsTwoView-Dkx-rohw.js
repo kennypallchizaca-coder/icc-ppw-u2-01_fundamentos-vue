@@ -1,1 +1,0 @@
-import{_ as o,c as t,b as s,f as a}from"./index-COCPS_yc.js";const c={},r={class:"projects-two"};function n(d,e){return a(),t("section",r,[...e[0]||(e[0]=[s("h2",null,"Proyectos Dos",-1),s("p",null,"Esta es una segunda vista de proyectos para explorar futuras funcionalidades.",-1)])])}const _=o(c,[["render",n],["__scopeId","data-v-1fe0cabb"]]);export{_ as default};
