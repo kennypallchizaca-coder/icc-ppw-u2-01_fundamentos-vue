@@ -6,6 +6,7 @@
       <RouterLink :to="{ name: 'perfil', params: { id: 1 } }" class="nav-link">Perfil</RouterLink>
       <RouterLink :to="{ name: 'projects' }" class="nav-link">Proyectos</RouterLink>
       <RouterLink :to="{ name: 'projects-two' }" class="nav-link">Proyectos Dos</RouterLink>
+      <RouterLink :to="{ name: 'form' }" class="nav-link">Formulario</RouterLink>
     </nav>
   </header>
 </template>
